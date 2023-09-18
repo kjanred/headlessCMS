@@ -10,7 +10,7 @@ export async function getStaticProps() {
   };
 }
 
-//exports our home page component
+//exports our Resources page component
 export default function Resources( { allData }) {
   return (
     <Layout>
@@ -18,8 +18,8 @@ export default function Resources( { allData }) {
 <div className="list-group container justify-content-center">
     {allData.map(
         ({id, name, url, description}) => (
-       <div className="list-group-item list-group-item-action col-5">
-          <Link key={id} href={url} className="resource-link" alt={description}>
+       <div  key={id} className="list-group-item list-group-item-action col-5">
+          <Link href={url} className="resource-link" alt={description}>
             {name}
           </Link>
             <p>{description}</p>
