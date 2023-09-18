@@ -1,0 +1,21 @@
+body {
+  padding: 10px;
+  background-color:whitesmoke;
+}
+
+a.resource-link:hover {
+  color: red;
+}
+
+footer {
+  text-align: center;
+}
+
+h6 {
+  font-weight:lighter; 
+}
+
+h1 {
+  font-family: 'Times New Roman', Times, serif ;
+  font-weight:bolder;
+}
