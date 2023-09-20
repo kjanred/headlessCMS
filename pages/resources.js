@@ -14,6 +14,8 @@ export async function getStaticProps() {
 export default function Resources( { allData }) {
   return (
     <Layout>
+
+
 <h1>Some helpful resources</h1>
 <div className="list-group container justify-content-center">
     {allData.map(

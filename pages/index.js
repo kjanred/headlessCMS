@@ -16,7 +16,7 @@ export default function Home( { allData }) {
     <Layout home>
 <h1>List of Dead Names</h1>
 <div className="list-group">
-    {allData.map(
+    {allData && allData.map(
         ({id, name}) => (
           <Link key ={id} href={`/${id}`} className="list-group-item list-group-item-action">
             {name}
