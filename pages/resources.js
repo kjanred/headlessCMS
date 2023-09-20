@@ -18,7 +18,7 @@ export default function Resources( { allData }) {
 
 <h1>Some helpful resources</h1>
 <div className="list-group container justify-content-center">
-    {allData.map(
+    {allData && allData.map(
         ({id, name, url, description}) => (
        <div  key={id} className="list-group-item list-group-item-action col-5">
           <Link href={url} className="resource-link" alt={description}>
