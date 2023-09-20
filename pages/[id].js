@@ -23,12 +23,13 @@ export default function Entry( { itemData } ) {
         <Layout>
             <article className="card col-6">
             <div className="card-body">
-            <h3 className="card-title">{ itemData.name}</h3>
-            <h4 className="card-subtitle mb-2 text-body-secondary">{itemData.favColor}</h4>
-            <p className="card-text">{itemData.favFood}</p>
-            <a href="#" className="card-link">{itemData.favAnimal}</a>
-            <h4>Skills:</h4>
-            <ul>
+            <h3 className="card-title"><strong>Name: </strong>{ itemData.name}</h3>
+            <h4 className="card-subtitle mb-2 text-body-secondary"><strong>Fav color: </strong>{itemData.favColor}</h4>
+            <h4 className="card-subtitle mb-2 text-body-secondary"><strong>Fav food: </strong>{itemData.favFood}</h4>
+            <h4 className="card-subtitle mb-2 text-body-secondary"><strong>Fav animal: </strong>{itemData.favAnimal}</h4>
+            <br />
+            <h4 className="ms-4">skills:</h4>
+            <ul className="ms-4">
             {itemData.skills && itemData.skills.map(
         ({id, skill, skillInfo}) => (
             <li key ={id} className="list-group-item list-group-item-action">
