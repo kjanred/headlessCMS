@@ -1,10 +1,10 @@
 import Layout from '../components/layout';
 import Link from 'next/link';
-import { getResourcesList } from '../lib/data';
+import { getResourcesList } from '../lib/data-firebase';
 
 
 export async function getStaticProps() {
-  const allData = getResourcesList();
+  const allData = await getResourcesList();
   return {
     props: { allData }
   };
