@@ -1,7 +1,7 @@
 import Layout from "../../components/layout";
 import { getAllIds, getData } from "../../lib/data";
 export async function getStaticProps({ params }) {
-  const itemData = await getData(params.ID);
+  const itemData = await getData(params.id);
   return {
     props: {
       itemData
@@ -23,12 +23,11 @@ export default function Entry({ itemData }) {
       <article className="card col-6">
         <div className="card-body">
           <h3 className="card-title">
-            <strong>Name: </strong>
-            {itemData.name}
+            <strong>First Name: </strong> {itemData.acf_fields.first_name} <strong>Last Name: </strong> {itemData.acf_fields.last_name}
           </h3>
           <h4 className="card-subtitle mb-2 text-body-secondary">
-            <strong>Fav color: </strong>
-            {itemData.post_title}
+            <strong>Description: </strong>
+            {itemData.acf_fields.description}
           </h4>
         </div>
       </article>

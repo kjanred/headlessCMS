@@ -13,7 +13,7 @@ export async function getStaticProps() {
 export default function Home({ allData }) {
   return (
     <Layout home>
-      <h1>List of Dead Names</h1>
+      <h1>List of Holy Names</h1>
       <div className="list-group">
         {allData &&
           allData.map(({ id, name }) => (
