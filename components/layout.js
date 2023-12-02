@@ -11,7 +11,7 @@ return (
     </Head>
     <header>
         <nav>
-            <Link href="../">Home</Link>
+            <Link href="../">Home</Link> <Link href="../customers">Customers</Link> <Link href="../products">Products</Link> <Link href="../events">Events</Link>
         </nav>
     </header>
     <main>
