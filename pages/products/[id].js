@@ -22,7 +22,7 @@ export default function Entry({ itemData }) {
   return (
     <Layout>
       <article className="card col-6">
-        <div className="card-body" dangerouslySetInnerHTML={{__html: data}} >
+        <div className="card-body" >
           <h3 className="card-title">
             <strong>{itemData.acf_fields.name}</strong>  {itemData.acf_fields.price}
           </h3>
