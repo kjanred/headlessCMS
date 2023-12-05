@@ -5,7 +5,8 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       itemData
-    }
+    },
+    revalidate: 60
   };
 }
 
@@ -21,7 +22,7 @@ export default function Entry({ itemData }) {
   return (
     <Layout>
       <article className="card col-6">
-        <div className="card-body">
+        <div className="card-body" dangerouslySetInnerHTML={{__html: data}} >
           <h3 className="card-title">
             <strong>First Name: </strong> {itemData.acf_fields.first_name} <strong>Last Name: </strong> {itemData.acf_fields.last_named}
           </h3>

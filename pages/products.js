@@ -2,6 +2,7 @@ import Layout from "../components/layout";
 import Link from "next/link";
 import { getSortedProductsList } from "../lib/data";
 
+
 export async function getStaticProps() {
   const allData = await getSortedProductsList();
   return {
@@ -13,6 +14,7 @@ export async function getStaticProps() {
 export default function Products({ allData }) {
   return (
     <Layout>
+      <div className="col">
       <h1>List of Holy Names</h1>
       <div className="list-group">
         {allData &&
@@ -25,7 +27,8 @@ export default function Products({ allData }) {
               {name}
             </Link>
           ))}
-      </div>
+        </div>
+        </div>
     </Layout>
   );
 }
